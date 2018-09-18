@@ -1,0 +1,222 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+    <title>Pricing example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/book.css' %}" rel="stylesheet">
+  </head>
+
+  <header>
+<h2>Log in to My Site</h2>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="../accueil">A.R.C</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../signup">INSCRIPTION <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../login">CONNEXION</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">RESERVER <span class="sr-only">(current)</span></a>
+            </li>
+            
+
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="../admin">ADMIN</a>
+
+
+
+
+          
+
+
+
+
+            
+          </form>
+        </div>
+      </nav>
+    </header>
+
+  <body background="{% static 'image/vacances.jpg' %}" style="background-size: 100%">
+
+
+
+
+
+   
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Réservation</h1>
+      <p class="lead"><strong>Logements, voitures ou services, réservez en quelques clicks.</strong></p>
+    </br>
+    </div>
+
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+           
+          </div>
+          <div class="card-body" style="background-color: #FCFAE1">
+            <h1 class="card-title pricing-card-title">logement<small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Vous voulez séjourner dans la maison de vos rêves ?</li>
+              <li>Vous voulez changer de décor ? </li>
+              <li>venez découvrir les logements diposnibles</li>
+              
+            </ul>
+
+
+
+
+            <p><a class="btn btn-lg btn-block btn-primary" href="../logement" role="button">RESERVER</a></p>
+
+
+
+
+
+
+
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            
+          </div>
+          <div class="card-body" style="background-color: #FCFAE1">
+            <h1 class="card-title pricing-card-title"> Voitures<small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Besoin d'une voiture pour vos déplacments?</li>
+              <li>On vous propose une large game de voitures</li>
+              <li>Pour réserver, Contactez nous</li>
+            </ul>
+            
+            <p><a class="btn btn-lg btn-block btn-primary" href="../vehicule" role="button">RESERVER</a></p>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="card mb-4 box-shadow" style="background-color: #FCFAE1">
+          <div class="card-header">
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Services<small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Vous êtes fatigués ou stressés</li>
+              <li>Vous avez  besoin de vous détendre</li>
+              <li>Massages et kiné à domicile</li>
+              <li>Pour réserver, contactez nous</li>
+            </ul>
+            <p><a class="btn btn-lg btn-block btn-primary" href="../service" role="button">RESERVER</a></p>
+            
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+            <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+           
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>

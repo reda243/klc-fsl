@@ -1,0 +1,131 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+
+     <!-- Bootstrap core CSS -->
+    <link href="{% static 'dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'signin.css' %}" rel="stylesheet">
+
+    
+  <header>
+<h2>Log in to My Site</h2>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="../accueil">A.R.C</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../signup">INSCRIPTION <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">CONNEXION</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../book">RESERVER <span class="sr-only">(current)</span></a>
+            </li>
+            
+
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <a class="btn btn-outline-success my-2 my-sm-0" href="../admin">ADMIN</a>
+
+
+
+
+          
+
+
+
+
+            
+          </form>
+        </div>
+      </nav>
+    </header>
+
+
+<body style="background-color: #FCFAE1">
+<div class="text-center">
+  
+  {% if form.errors %}
+    <p style="color: red">Your username and password didn't match. Please try again.</p>
+  {% endif %}
+
+<br><br><br><br><br><br><br><br><br><br>
+
+
+
+  <form method="post" >
+
+    <div class="form-signin">
+    {% csrf_token %}
+
+
+
+    <input type="hidden" name="next" value="{{ next }}" />
+
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQCSURBVGhD7dpZqFZVHIbx02hpAyaNWhGYJmQ3URdpkBlCkCJUONaFSFAYBU2SRSkFFQUWDSRY4JCg0ECkBV00CN10IV1EoxJmUTabUZDZ86gb/q6zv2EP3/4OB1/44eGcvdZee16DA0cyjDMW8/AMPsIX+AX7D/kNX+EtPIZrcRKGRE7GLfgYWYOL+BsbMRNHo/F4Jp/EHuQ1sIxPsQBHoedxJ4vwHfIak2cvPPN5f8uzFZegZzkFryNv5/oHb+MBXIVxOBFZjsWFmIUnsA159cgDX4LaMwmfIW+nX+NunIGiuRi+HP5CXt1rcTxqyWT8hHQnv+Iu1LEjT8LL+A/pft7BSFTKeOQ9D+/hHNSdq/E90v29gWNQKqPhez+tdCW833uVs5H3One/pbIBaWUr0ET8Pn2IdP/Xo1DmI63Eh7LJnIpPENvgs3o6uopnYzdiBZ6d0vdohUzEH4htWY2ushSxoBVdgH5lMWJ79uEitI1dj/RV6zeijviBPOHgj4Vib8JOaGzTGrTNDYgFfkDldzjJXhyepGv8RcFMR2yXvYjT0DJpgTtQNfabYp32vWagaNJX8m1oGS/j/bDQ46ija30WPIOxEWUOxr5XrMMvfuOxx+xDGhtS9GDsSaTlR6Dx1HEwjlli+cvQl1Q9mHWIZW9Cbs7EpT32LGJj1O3BLEMstxyD8iDiRk3zYDrdKs4PxDJP47DYm7WiuFE/OCZpl7QP+BIG5XPEjfrhIbTLzYjbv4BBcTj7CvyG9FL65sl8gE69iNsRyzj270tGwQbHxsjf+bdOeQqxnEPtxlP1IMxmxLLXodHUcRCOh5x2jeXPQ8s4sJpy6N+6sgWxASpyEMY2xfLb0TJOOHwJN3SUeD6qxpdIbICKHoR5HrGOF9EyCxE33oSqGYPfkdVZ5iAcvzuPFtvmbGbLXI64sf0iJ+iqZip8tdulKDNQc2gR27UDHYcY7yMWehP9jOsu8Yqq7aAqi5csFpK91n7lNcS27EScHG8bZ9VjYWdSnElvOg61Yzs0F13nXMRlM/m6cyakqbj88C9iGzzBhTMHsRLZT3JuttfxINKlBifTHS+VihPHsTLtwhXoRZz8uBPplXCIUWmfVmyfP1YqV5TuQ22LMMTb1uWDdF8elFeocuzjrEe6A9kLcIa8yrSRvQnHIXkLq95es1FbvDL3Ir3kmW/gUHkCuslxmIZVSL8RmW/Rq1v4wHRnpxXdH+G73+Vrbz8noR1r34Pn8C7+RF7ZjP+poOvlg7JxovsRtFrArMIreyMajUsNvtV+Rl6jivBZuxV9mTnMYnfBXvOryFvIbMXJDue4roTP4JCLD7wfUycKHoaNddnuUTgR7UScHcEjGcYZGPgfbkSVOC3HU3gAAAAASUVORK5CYII=">
+
+  {% for field in form %}
+
+
+
+
+      <p>
+        <h1 class="h3 mb-3 font-weight-normal">{{ field.label_tag }}</h1><br>
+        {{ field }}<br>
+
+
+
+
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }} </p>
+
+
+        {% endfor %}
+
+
+
+
+
+
+        {% if field.help_text %}
+          <p><small style="color: grey">{{ field.help_text }}</small></p>
+        {% endif %}
+
+
+      </p>
+    {% endfor %}
+
+
+
+
+    <button type="submit">Log in</button>
+    <a href="{% url 'signup' %}">New to My Site? Sign up</a>
+
+    </div>
+    
+  </form>
+</div>
+
+
+</body>
+<br><br><br><br><br><br><br><br><br><br>
+<footer><center><p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p></center></footer>
+</html>
+
+
+
+
